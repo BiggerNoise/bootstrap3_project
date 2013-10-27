@@ -1,0 +1,25 @@
+<h1>Listing turds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turds.each do |turd| %>
+      <tr>
+        <td><%= link_to 'Show', turd %></td>
+        <td><%= link_to 'Edit', edit_turd_path(turd) %></td>
+        <td><%= link_to 'Destroy', turd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Turd', new_turd_path %>
